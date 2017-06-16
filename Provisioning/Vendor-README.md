@@ -45,11 +45,12 @@ The metadata published by the UK federation uses the SAML 2.0 metadata format. T
   - **ManageNameIDService** – is optional and should be used if the RDSS service supports name identifier changes or terminations.
   - **AssertionConsumerService** – this defines the endpoints that an IdP sends user’s information to at the SP. It defines the authorised endpoints used by a SP. The bindings attribute defines how to interact or communicate with an endpoint. RDSS SP will support the six commonly used bindings.
 
-SP metadata RDSS template is in [rdsss-metadata.xml](template/rdsss-metadata.xml).
+SP metadata RDSS template is in [rdsss-metadata.xml](template/rdss_metadata.xml).
 
 ## UK Federation Registration
 RDSS will be registered as service providers’ entities in UK federation. The registration will be based on the latest version of the Shibboleth SP software (open source).
-![UKAMF Registration](images\SP_Entity_Registration.png)
+
+![UKAMF Registration](images/SP_Entity_Registration.png)
 
 ### Data required
 
