@@ -120,6 +120,14 @@ If a service is meant to serve users from different identity providers, the SP m
 
 Although, the central discovery service (CDS) supports two discovery protocols, i.e. “WAYF protocol” and “DS protocol”, RDSS SPs that require CDS support will be configured using the DS protocol based CDS, i.e. https://wayf.ukfederation.org.uk/DS.
 
+## User Logout from a UKAMF Integrated Service
+When a user logs-out from a service that has been integrated to UKAMF, the following must occur:
+1. The user session on a service (e.g. user session on Archivematica or Semvera services),  must be removed, i.e. corresponding session cookies on a user's browser must be invalidated/deleted and the user session on the server-side but be terminated/invalidated.
+2. When a user logs-out from a service, the following must occur:
+  - The user must be redirected to a new page. The redirected page must display a message similar to this: "You are now logged out from {SERVICE_NAME}, we recommend you close your browser if your are on a shared desktop or device".
+  - A user should not be able to use the browser back button to view protected or sensitive content pages, without reauthentication. This can be achieved by disabling browser cache on all protected or sensitive pages, e.g. *`"Cache-Control: no-cache"`*. It is acknowledged that this may have performance implications for authenticated users that uses their browser back button often.
+
+Users are advised to close their browsers when they have finished using a service or are not using other services that are protected by UKAMF (Shibboleth) on a device. This is to ensure other users or malicious users could not assume or hijack the identity of a UKAMF user on a device.
 
 [//]: # (Reference links used in the body of this)
 
